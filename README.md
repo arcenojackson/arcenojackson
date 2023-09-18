@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **Microservices, Kafka, RabbitMQ, NestJS...**
 
-- ▶️ I have a YouTube channel at [@espresso_code](https://www.youtube.com/@espresso_code)
+- ▶️ I'm starting a YouTube channel at [@espresso_code](https://www.youtube.com/@espresso_code)
 
 - 👨‍💻 All of my projects are available at [https://github.com/JacksonFA?tab=repositories](https://github.com/JacksonFA?tab=repositories)
 
