@@ -3,17 +3,17 @@
 
 - 🔭 I’m currently working on Seventh
 
-- 🌱 I’m currently learning **Microservices, Kafka, RabbitMQ, NestJS...**
+- 👨🏼‍🏫 I'm starting teach at Imagine School
 
-- ▶️ I'm starting a YouTube channel at [@espresso_code](https://www.youtube.com/@espresso_code)
+- 🌱 I’m currently learning **about teaching programming basics**
 
-- 👨‍💻 All of my projects are available at [https://github.com/JacksonFA?tab=repositories](https://github.com/JacksonFA?tab=repositories)
+- ▶️ I've a YouTube channel at [@espresso_code](https://www.youtube.com/@espresso_code)
 
-- 💬 Ask me about **node, react, typecript**
+- 👨‍💻 All of my projects are available at [Repositories](https://github.com/JacksonFA?tab=repositories)
 
-- 📫 How to reach me **jackson.f205@gmail.com**
+- 💬 Ask me about **programming logic, algorythms, typecript, ...**
 
-- Connect with me: <p><a href="https://linkedin.com/in/jacksonfa/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jacksonfa/" height="30" width="40" /></a><a href="https://instagram.com/jacksonfa.dev/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/jacksonfa.dev/" height="30" width="40" /></a><a href="https://youtube.com/@espresso_code/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.instagram.com/jape.lipe/" height="30" width="40" /></a></p>
+- Connect with me: <p><a href="https://linkedin.com/in/jacksonfa/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jacksonfa/" height="30" width="40" /></a><a href="https://instagram.com/jacksonfa.dev/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/jacksonfa.dev/" height="30" width="40" /></a><a href="https://youtube.com/@espresso_code/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.youtube.com/@espresso_code/" height="30" width="40" /></a></p>
 
 <div>
   <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=JacksonFA&show_icons=true&theme=codeSTACKr&gradient=true&include_all_commits=true&count_private=true&hide=stars"/>
