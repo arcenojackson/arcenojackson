@@ -14,7 +14,7 @@
 - 💬 Ask me about **programming logic, algorythms, typecript, ...**
 
 - Connect with me: <p><a href="https://linkedin.com/in/jacksonfa/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/jacksonfa/" height="30" width="40" /></a><a href="https://instagram.com/jacksonfa.dev/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/jacksonfa.dev/" height="30" width="40" /></a><a href="https://youtube.com/@espresso_code/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.youtube.com/@espresso_code/" height="30" width="40" /></a></p>
-
+<a href="https://api.badgr.io/public/assertions/sTKpe8vtTDmasrD3Qo0MOg"><img width="120px" height="120px" src="https://api.badgr.io/public/assertions/sTKpe8vtTDmasrD3Qo0MOg/image"></a>
 <div>
   <img width="400em" height="180em" src="https://github-readme-stats.vercel.app/api?username=JacksonFA&show_icons=true&theme=codeSTACKr&gradient=true&include_all_commits=true&count_private=true&hide=stars"/>
   <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JacksonFA&layout=compact&langs_count=5&theme=codeSTACKr"/>
