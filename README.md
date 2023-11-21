@@ -1,6 +1,6 @@
-# Heey 👋, I'm Jackson Arceno
+# Heey 👋
 
-### A passionate backend developer from Brazil <img src="./logo.png" alt="ilustração de um computador" width="250px" align="right">
+### I'm Jackson Arceno, a passionate backend developer from Brazil <img src="./logo2.png" alt="ilustração de um computador" width="250px" align="right">
 
 - 🔭 I’m currently working on Seventh
 - 👨🏼‍🏫 I'm starting teach at Imagine School
@@ -9,7 +9,7 @@
 
 ##
 
-#### Connect with me:
+### Connect with me
 
 <a href="https://instagram.com/jacksonfa.dev/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/jacksonfa.dev/" height="30" width="40" />
@@ -23,7 +23,7 @@
 
 ##
 
-#### Daily technologies
+### Daily technologies
 [<img height="48px" width="48px" alt="Icone TypeScript" src="https://skillicons.dev/icons?i=ts"/>](https://www.typescriptlang.org/pt/)
 [<img height="48px" width="48px" alt="Icone Linux" src="https://skillicons.dev/icons?i=linux"/>](https://www.linux.org)
 [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=vscode"/>](https://code.visualstudio.com)
@@ -39,11 +39,11 @@
 
 ##
 
-#### I'm learning
+### I'm learning
 [<img height="48px" width="48px" alt="Icone Kubernetes" src="https://skillicons.dev/icons?i=kubernetes"/>](https://kubernetes.io)
 [<img height="48px" width="48px" alt="Icone Angular" src="https://skillicons.dev/icons?i=angular"/>](https://angular.io)
 
-And also to teach
+And also to teach...
 
 [<img height="48px" width="48px" alt="Icone Html" src="https://skillicons.dev/icons?i=html"/>](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [<img height="48px" width="48px" alt="Icone CSS" src="https://skillicons.dev/icons?i=css"/>](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -53,8 +53,7 @@ And also to teach
 
 ##
 
-#### Stats
-
+### Stats
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
@@ -65,12 +64,15 @@ And also to teach
     srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
   />
   <img
-    style="max-width: 600px; width: 100%"
+    style="max-width:1100px"
+    width="100%"
+    height="100%"
     alt="github contribution grid snake animation"
     src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
   />
 </picture>
-
-[<div style="max-width: 600px; min-height: 100px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/?username=JacksonFA&show_icons=true&include_all_commits=true&theme=calm_pink"/></div>](https://github.com/JacksonFA)
-[<div style="max-width: 600px; min-height: 100px"><img width="100%" height="100%" alt="GitHub Statistics" src="http://github-readme-streak-stats.herokuapp.com/?user=JacksonFA&amp;theme=calm_pink"/></div>](https://github.com/JacksonFA)
-[<div style="max-width: 600px; min-height: 100px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JacksonFA&layout=compact&langs_count=7&theme=calm_pink"/></div>](https://github.com/JacksonFA)
+<div style="display: flex">
+  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/?username=JacksonFA&show_icons=true&include_all_commits=true&theme=calm_pink"/></div>
+  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="http://github-readme-streak-stats.herokuapp.com/?user=JacksonFA&amp;theme=calm_pink"/></div>
+  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JacksonFA&layout=compact&langs_count=7&theme=calm_pink"/></div>
+</div>
