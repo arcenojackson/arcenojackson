@@ -72,7 +72,7 @@ And also to teach...
   />
 </picture>
 <div style="display: flex">
-  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/?username=JacksonFA&show_icons=true&include_all_commits=true&theme=calm_pink"/></div>
-  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="http://github-readme-streak-stats.herokuapp.com/?user=JacksonFA&amp;theme=calm_pink"/></div>
-  <div style="max-width: 400px; min-height: 100px; max-height: 150px"><img width="100%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JacksonFA&layout=compact&langs_count=7&theme=calm_pink"/></div>
+  <img width="47%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/?username=JacksonFA&show_icons=true&include_all_commits=true&theme=calm_pink"/>
+  <img width="50%" height="100%" alt="GitHub Statistics" src="http://github-readme-streak-stats.herokuapp.com/?user=JacksonFA&amp;theme=calm_pink"/>
+  <img width="60%" height="100%" alt="GitHub Statistics" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JacksonFA&layout=compact&langs_count=7&theme=calm_pink"/>
 </div>
