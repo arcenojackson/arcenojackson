@@ -2,7 +2,7 @@
 
 ###
 
-<h4 align="left">I'm Jackson Arceno, a passionate backend developer from Brazil</h4>
+<h2 align="left">I'm Jackson Arceno, a passionate backend developer from Brazil</h2>
 
 ###
 
