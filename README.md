@@ -84,9 +84,9 @@
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JacksonFA&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=true&order=1" height="142" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=JacksonFA&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=true&order=1" height="200" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=JacksonFA&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=10&theme=nightowl&hide_border=true&order=2" height="200" alt="languages graph"  />
-  <img src="https://streak-stats.demolab.com?user=JacksonFA&locale=en&mode=weekly&theme=nightowl&hide_border=true&border_radius=5&date_format=j/n%5B/Y%5D&order=3" height="138" alt="streak graph"  />
+  <img src="https://streak-stats.demolab.com?user=JacksonFA&locale=en&mode=weekly&theme=nightowl&hide_border=true&border_radius=5&date_format=j/n%5B/Y%5D&order=3" height="200" alt="streak graph"  />
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=JacksonFA&radius=16&theme=nightowl&area=true&order=5&hide_border=true&hide_title=true" height="200" alt="activity-graph graph"  />
 </div>
 
