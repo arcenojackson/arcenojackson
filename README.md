@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">🔭 I’m currently working on Seventh<br>👨🏼‍🏫 I'm starting teach at Imagine School<br>🌱 I’m currently learning about teaching programming basics<br>▶️ I've a YouTube channel at @espresso_code</p>
+<p align="left">🔭 I’m currently working on Seventh<br>👨🏼‍🏫 I'm teaching at Imagine School<br>🌱 I’m currently learning about teaching programming basics<br>▶️ I've a YouTube channel at @espresso_code</p>
 
 ###
 
