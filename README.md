@@ -2,7 +2,7 @@
 
 ###
 
-<h2 align="left">I'm Jackson Arceno, a passionate backend developer from Brazil</h2>
+<h2 align="left">I'm Jackson Arceno, a passionate software engineer 🚀</h2>
 
 ###
 
