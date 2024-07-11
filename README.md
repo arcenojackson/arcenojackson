@@ -34,9 +34,9 @@
 ###
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=js" height="36" alt="javascript logo"  />
-  <img width="8" />
   <img src="https://skillicons.dev/icons?i=ts" height="36" alt="typescript logo"  />
+  <img width="8" />
+  <img src="https://skillicons.dev/icons?i=js" height="36" alt="javascript logo"  />
   <img width="8" />
   <img src="https://skillicons.dev/icons?i=nodejs" height="36" alt="nodejs logo"  />
   <img width="8" />
@@ -47,6 +47,8 @@
   <img src="https://skillicons.dev/icons?i=mongodb" height="36" alt="mongodb logo"  />
   <img width="8" />
   <img src="https://skillicons.dev/icons?i=postgres" height="36" alt="postgresql logo"  />
+  <img width="8" />
+  <img src="https://skillicons.dev/icons?i=redis" height="36" alt="redis logo"  />
   <img width="8" />
   <img src="https://skillicons.dev/icons?i=prisma" height="36" alt="prisma logo"  />
   <img width="8" />
@@ -71,8 +73,6 @@
   <img src="https://skillicons.dev/icons?i=kafka" height="36" alt="apachekafka logo"  />
   <img width="8" />
   <img src="https://skillicons.dev/icons?i=rabbitmq" height="36" alt="rabbitmq logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=redis" height="36" alt="redis logo"  />
   <img width="8" />
   <img src="https://skillicons.dev/icons?i=react" height="36" alt="react logo"  />
   <img width="8" />
