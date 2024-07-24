@@ -20,14 +20,17 @@
   <a href="https://youtube.com/@espresso_code" target="_blank">
     <img src="https://img.shields.io/static/v1?message=@espresso_code&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="youtube logo"  />
   </a>
-  <a href="https://www.linkedin.com/in/jacksonfa/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=jacksonfa&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="linkedin logo"  />
+  <a href="https://www.linkedin.com/in/arcenojackson/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=arcenojackson&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="linkedin logo"  />
   </a>
   <a href="https://discord.com/@jacksonfa.dev" target="_blank">
     <img src="https://img.shields.io/static/v1?message=jacksonfa.dev&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="discord logo"  />
   </a>
   <a href="https://instagram.com/jacksonfa.dev" target="_blank">
     <img src="https://img.shields.io/static/v1?message=jacksonfa.dev&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="instagram logo"  />
+  </a>
+  <a href="https://x.com/arcenojackson" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=arcenojackson&logo=x&label=&color=000&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="discord logo"  />
   </a>
 </div>
 
