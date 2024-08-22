@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">🔭 I’m currently working on Seventh<br>👨🏼‍🏫 I'm teaching at Imagine School<br>🌱 I’m currently learning about teaching JS/TS (React, Next, Node) and also about Tech Leadership<br>▶️ I've a YouTube channel at @espresso_code</p>
+<p align="left">🔭 I’m currently working on Seventh<br>🌱 I’m currently learning about teaching Go and Rust and also about Tech Leadership<br>▶️ I've a YouTube channel at @espresso_code</p>
 
 ###
 
