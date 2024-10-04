@@ -17,7 +17,7 @@
 ###
 
 <div align="center">
-  <a href="https://youtube.com/@espresso_code" target="_blank">
+  <a href="https://youtube.com/@arcenojackson" target="_blank">
     <img src="https://img.shields.io/static/v1?message=@espresso_code&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="youtube logo"  />
   </a>
   <a href="https://www.linkedin.com/in/arcenojackson/" target="_blank">
@@ -26,7 +26,7 @@
   <a href="https://discord.com/@jacksonfa.dev" target="_blank">
     <img src="https://img.shields.io/static/v1?message=jacksonfa.dev&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="discord logo"  />
   </a>
-  <a href="https://instagram.com/jacksonfa.dev" target="_blank">
+  <a href="https://instagram.com/arcenojackson" target="_blank">
     <img src="https://img.shields.io/static/v1?message=jacksonfa.dev&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="26" alt="instagram logo"  />
   </a>
   <a href="https://x.com/arcenojackson" target="_blank">
@@ -87,14 +87,14 @@
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JacksonFA&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=true&order=1" height="200" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=JacksonFA&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=10&theme=nightowl&hide_border=true&order=2" height="200" alt="languages graph"  />
-  <img src="https://streak-stats.demolab.com?user=JacksonFA&locale=en&mode=weekly&theme=nightowl&hide_border=true&border_radius=5&date_format=j/n%5B/Y%5D&order=3" height="200" alt="streak graph"  />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=JacksonFA&radius=16&theme=nightowl&area=true&order=5&hide_border=true&hide_title=true" height="200" alt="activity-graph graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=arcenojackson&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=nightowl&locale=en&hide_border=true&order=1" height="200" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=arcenojackson&locale=en&hide_title=true&layout=compact&card_width=320&langs_count=10&theme=nightowl&hide_border=true&order=2" height="200" alt="languages graph"  />
+  <img src="https://streak-stats.demolab.com?user=arcenojackson&locale=en&mode=weekly&theme=nightowl&hide_border=true&border_radius=5&date_format=j/n%5B/Y%5D&order=3" height="200" alt="streak graph"  />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=arcenojackson&radius=16&theme=nightowl&area=true&order=5&hide_border=true&hide_title=true" height="200" alt="activity-graph graph"  />
 </div>
 
 ###
 
-<img src="https://raw.githubusercontent.com/JacksonFA/JacksonFA/output/snake.svg" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/arcenojackson/arcenojackson/output/snake.svg" alt="Snake animation" />
 
 ###
