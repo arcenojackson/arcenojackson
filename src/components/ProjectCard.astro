@@ -1,0 +1,70 @@
+---
+import type { Project } from '@/data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const previewStyle = `background: linear-gradient(135deg, ${project.gradientFrom}, ${project.gradientTo});`;
+---
+
+<article class="project-card">
+  <div class="project-preview" style={previewStyle} aria-hidden="true">
+    <span class="project-icon">{project.icon}</span>
+  </div>
+
+  <div class="project-body">
+    <h3 class="project-title">{project.title}</h3>
+    <p class="project-desc">{project.description}</p>
+
+    <div class="project-tags">
+      {project.tech.map((t) => <span class="tag">{t}</span>)}
+    </div>
+
+    <div class="project-links">
+      {project.demoUrl && (
+        <a href={project.demoUrl} target="_blank" rel="noopener" class="link-demo">
+          Ver projeto →
+        </a>
+      )}
+      {project.githubUrl && (
+        <a href={project.githubUrl} target="_blank" rel="noopener" class="link-github">
+          GitHub
+        </a>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover { border-color: rgba(167, 139, 250, 0.3); }
+
+  .project-preview {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-icon { font-size: 36px; }
+
+  .project-body { padding: 18px 20px 22px; }
+
+  .project-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+
+  .project-desc { font-size: 13px; color: var(--text-dim); line-height: 1.65; margin-bottom: 14px; }
+
+  .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+
+  .project-links { display: flex; gap: 8px; }
+</style>

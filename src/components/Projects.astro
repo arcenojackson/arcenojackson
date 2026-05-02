@@ -1,0 +1,35 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { projects } from '@/data/projects';
+---
+
+<section id="projetos" class="projects-section">
+  <div class="projects-inner">
+    <p class="section-label">Projetos</p>
+    <h2 class="section-title">O que tenho construído</h2>
+    <p class="section-sub">Produtos reais, entregues e em uso</p>
+
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-section { padding: 80px 48px; }
+
+  .projects-inner { max-width: 1280px; margin: 0 auto; }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .projects-section { padding: 60px 20px; }
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+</style>
