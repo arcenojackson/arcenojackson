@@ -1,0 +1,110 @@
+---
+const stats = [
+  { value: '5+', label: 'Anos de experiência' },
+  { value: '10+', label: 'Projetos entregues' },
+  { value: '3', label: 'Stacks principais' },
+];
+---
+
+<section id="sobre" class="about-section">
+  <div class="about-inner">
+    <div class="about-grid">
+      <div class="avatar" aria-label="Foto de Jackson Arceno">
+        👨‍💻
+      </div>
+
+      <div class="about-content">
+        <p class="section-label">Sobre mim</p>
+        <h2 class="section-title">
+          Engenheiro de Software<br />apaixonado por produto
+        </h2>
+
+        <p class="about-text">
+          Trabalho com TypeScript, Go e Rust construindo APIs robustas, sistemas
+          distribuídos e produtos completos — do backend ao frontend. Atualmente
+          na Outsera e sempre em busca de desafios que valham a pena resolver.
+        </p>
+        <p class="about-text">
+          Tenho um canal no YouTube (<a
+            href="https://youtube.com/@arcenojackson"
+            target="_blank"
+            rel="noopener"
+            class="about-link">@espresso_code</a
+          >) onde compartilho conhecimento sobre desenvolvimento de software.
+          Também sirvo como voluntário desenvolvendo tecnologia para a Igreja
+          Presbiteriana do Estreito.
+        </p>
+
+        <div class="stats">
+          {stats.map(({ value, label }) => (
+            <div class="stat">
+              <span class="stat-value">{value}</span>
+              <span class="stat-label">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section { padding: 80px 48px; }
+
+  .about-inner { max-width: 1280px; margin: 0 auto; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #302b63, #24243e);
+    border: 2px solid rgba(167, 139, 250, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.15);
+    flex-shrink: 0;
+  }
+
+  .about-content { padding-top: 4px; }
+
+  .about-text {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .about-link { color: var(--primary); text-decoration: none; }
+  .about-link:hover { text-decoration: underline; }
+
+  .stats { display: flex; gap: 40px; margin-top: 28px; flex-wrap: wrap; }
+
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+
+  .stat-value {
+    font-size: 34px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .stat-label { font-size: 12px; color: var(--text-dim); }
+
+  @media (max-width: 768px) {
+    .about-section { padding: 60px 20px; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .avatar { width: 100px; height: 100px; font-size: 40px; }
+  }
+</style>

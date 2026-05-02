@@ -2,12 +2,14 @@
 import Base from '@/layouts/Base.astro';
 import Navbar from '@/components/Navbar.astro';
 import Hero from '@/components/Hero.astro';
+import About from '@/components/About.astro';
 ---
 
 <Base>
   <Navbar />
   <Hero />
-  <section id="sobre" style="min-height: 50vh; padding: 2rem; color: white;">Sobre</section>
+  <div class="divider"></div>
+  <About />
   <section id="projetos" style="min-height: 50vh; padding: 2rem; color: white;">Projetos</section>
   <section id="skills" style="min-height: 50vh; padding: 2rem; color: white;">Skills</section>
   <section id="contato" style="min-height: 50vh; padding: 2rem; color: white;">Contato</section>
