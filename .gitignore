@@ -5,3 +5,20 @@ node_modules/
 
 # Brainstorming sessions
 .superpowers/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
