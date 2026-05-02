@@ -1,0 +1,148 @@
+---
+import type { FeaturedProject } from '@/data/projects';
+
+interface Props {
+  project: FeaturedProject;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="featured-card">
+  <span class="featured-badge">★ Em destaque</span>
+
+  <div class="featured-preview">
+    <div class="preview-grid" aria-hidden="true"></div>
+    <div class="preview-icon">{project.icon}</div>
+  </div>
+
+  <div class="featured-body">
+    <p class="featured-category">{project.category}</p>
+    <h3 class="featured-title">{project.title}</h3>
+    <p class="featured-desc">{project.description}</p>
+
+    <div class="featured-tags">
+      {project.tech.map((t) => <span class="tag">{t}</span>)}
+    </div>
+
+    <div class="featured-links">
+      {project.demoUrl && (
+        <a href={project.demoUrl} target="_blank" rel="noopener" class="link-demo">
+          Ver demo →
+        </a>
+      )}
+      {project.githubUrl && (
+        <a href={project.githubUrl} target="_blank" rel="noopener" class="link-github">
+          GitHub
+        </a>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+  .featured-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      0 0 60px rgba(124, 58, 237, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    z-index: 2;
+  }
+
+  .featured-preview {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, #1a0533, #0c1445, #050d2b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .preview-grid {
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 40px,
+        rgba(167, 139, 250, 0.03) 40px,
+        rgba(167, 139, 250, 0.03) 41px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 40px,
+        rgba(167, 139, 250, 0.03) 40px,
+        rgba(167, 139, 250, 0.03) 41px
+      );
+  }
+
+  .preview-icon {
+    font-size: 40px;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-body { padding: 20px 24px 24px; }
+
+  .featured-category {
+    font-size: 10px;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .featured-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .featured-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .featured-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .featured-links { display: flex; gap: 10px; }
+</style>
