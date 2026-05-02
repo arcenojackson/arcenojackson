@@ -1,0 +1,102 @@
+---
+const skillGroups = [
+  {
+    title: 'Backend',
+    items: ['TypeScript / Node.js', 'NestJS / Express', 'Go', 'Rust', 'GraphQL / Apollo'],
+  },
+  {
+    title: 'Dados',
+    items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma ORM', 'Kafka / RabbitMQ'],
+  },
+  {
+    title: 'Infra & Cloud',
+    items: ['Docker / Kubernetes', 'AWS', 'GitHub Actions', 'Linux', 'Vercel'],
+  },
+  {
+    title: 'Frontend',
+    items: ['React / Next.js', 'Angular', 'Astro', 'Jest'],
+  },
+];
+---
+
+<section id="skills" class="skills-section">
+  <div class="skills-inner">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">Tecnologias que uso</h2>
+    <p class="section-sub">Stack principal e ferramentas do dia a dia</p>
+
+    <div class="skills-grid">
+      {skillGroups.map(({ title, items }) => (
+        <div class="skill-group">
+          <h3 class="skill-group-title">{title}</h3>
+          <ul class="skill-list" role="list">
+            {items.map((item) => (
+              <li class="skill-item">
+                <span class="skill-dot" aria-hidden="true"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    padding: 80px 48px;
+    background: rgba(167, 139, 250, 0.02);
+  }
+
+  .skills-inner { max-width: 1280px; margin: 0 auto; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .skill-group {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .skill-group-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .skill-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.5);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .skills-section { padding: 60px 20px; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+</style>
