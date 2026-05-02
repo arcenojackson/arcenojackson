@@ -1,0 +1,117 @@
+---
+const navLinks = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#projetos', label: 'Projetos' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contato', label: 'Contato' },
+];
+---
+
+<header>
+  <nav>
+    <a href="/" class="wordmark" aria-label="arcenojackson — home">
+      <span class="wordmark-first">arceno</span><span class="wordmark-last">jackson</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a href={href} class="nav-link" data-section={href.slice(1)}>
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="#contato" class="btn-primary nav-cta">Entrar em contato →</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+    background: rgba(7, 5, 15, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .wordmark {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    font-family: system-ui;
+  }
+
+  .wordmark-first { color: #fff; }
+
+  .wordmark-last {
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-link {
+    color: var(--text-muted);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary);
+  }
+
+  .nav-cta {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-cta { font-size: 12px; padding: 8px 14px; }
+  }
+</style>
+
+<script>
+  const sections = document.querySelectorAll<HTMLElement>('section[id]');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove('active'));
+          const active = document.querySelector<HTMLAnchorElement>(
+            `.nav-link[data-section="${entry.target.id}"]`
+          );
+          active?.classList.add('active');
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+</script>
