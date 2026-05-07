@@ -1,32 +1,22 @@
 ---
-const skillGroups = [
-  {
-    title: 'Backend',
-    items: ['TypeScript / Node.js', 'NestJS / Express', 'Go', 'Python', 'GraphQL / Apollo'],
-  },
-  {
-    title: 'Dados',
-    items: ['PostgreSQL', 'MongoDB', 'Redis', 'SAP S/4HANA', 'Filas / Eventos'],
-  },
-  {
-    title: 'Infra & Cloud',
-    items: ['Docker / Kubernetes', 'AWS', 'GitHub Actions', 'Linux', 'Vercel'],
-  },
-  {
-    title: 'Frontend',
-    items: ['React / Next.js', 'Angular', 'Astro', 'Flutter'],
-  },
-];
+import { translations, type Lang } from '@/i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang].skills;
 ---
 
 <section id="skills" class="skills-section">
   <div class="skills-inner">
-    <p class="section-label">Skills</p>
-    <h2 class="section-title">Tecnologias que uso</h2>
-    <p class="section-sub">Stack principal e ferramentas do dia a dia</p>
+    <p class="section-label">{t.label}</p>
+    <h2 class="section-title">{t.title}</h2>
+    <p class="section-sub">{t.sub}</p>
 
     <div class="skills-grid">
-      {skillGroups.map(({ title, items }) => (
+      {t.groups.map(({ title, items }) => (
         <div class="skill-group">
           <h3 class="skill-group-title">{title}</h3>
           <ul class="skill-list" role="list">

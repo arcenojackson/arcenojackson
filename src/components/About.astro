@@ -1,11 +1,15 @@
 ---
-const stats = [
-  { value: '6+', label: 'Anos de experiência' },
-  { value: '10+', label: 'Projetos entregues' }
-];
+import { translations, type Lang } from '@/i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang].about;
 ---
 
-<section id="sobre" class="about-section">
+<section id={lang === 'pt' ? 'sobre' : 'about'} class="about-section">
   <div class="about-inner">
     <div class="about-grid">
       <div class="avatar" aria-label="Foto de Jackson Arceno">
@@ -13,29 +17,31 @@ const stats = [
       </div>
 
       <div class="about-content">
-        <p class="section-label">Sobre mim</p>
+        <p class="section-label">{t.label}</p>
         <h2 class="section-title">
-          Engenheiro de Software<br />apaixonado por produto
+          {t.title.split('\n').map((line, i) => (
+            <>
+              {i > 0 && <br />}
+              {line}
+            </>
+          ))}
         </h2>
 
         <p class="about-text">
-          Trabalho com TypeScript, Go e Python, construindo APIs robustas, sistemas
-          distribuídos e produtos completos, do backend ao frontend. </br> Atualmente
-          na Outsera e sempre em busca de desafios que valham a pena resolver.
+          {t.text1} <br /> {t.text1Suffix}
         </p>
         <p class="about-text">
-          Já tive um canal no YouTube (<a
+          {t.text2} (<a
             href="https://youtube.com/@arcenojackson"
             target="_blank"
             rel="noopener noreferrer"
-            class="about-link">@arcenojackson</a>) 
-           onde compartilhei por um breve tempo, conhecimentos sobre programação. </br>
-          Também sirvo como voluntário na Igreja Presbiteriana do Estreito,
-           contribuindo na música e na tecnologia da igreja.
+            class="about-link">@arcenojackson</a>)
+           {t.text2Mid} <br />
+          {t.text2Suffix}
         </p>
 
         <div class="stats">
-          {stats.map(({ value, label }) => (
+          {t.stats.map(({ value, label }) => (
             <div class="stat">
               <span class="stat-value">{value}</span>
               <span class="stat-label">{label}</span>

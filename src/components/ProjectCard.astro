@@ -1,59 +1,242 @@
 ---
 import type { Project } from '@/data/projects';
+import { translations, type Lang } from '@/i18n/translations';
 
 interface Props {
   project: Project;
+  lang: Lang;
 }
 
-const { project } = Astro.props;
+const { project, lang } = Astro.props;
+const t = translations[lang].projects;
 
+const description = lang === 'en' ? project.descriptionEn : project.description;
 const previewStyle = `background: linear-gradient(135deg, ${project.gradientFrom}, ${project.gradientTo});`;
+
+const hasStoreLinks = !!(project.appStoreUrl || project.playStoreUrl);
+const cardHref = !hasStoreLinks ? (project.demoUrl || project.githubUrl || '') : '';
+const Tag = cardHref ? 'a' : 'article';
+const linkProps = cardHref
+  ? { href: cardHref, target: '_blank', rel: 'noopener noreferrer' }
+  : {};
 ---
 
-<article class="project-card">
-  <div class="project-preview" style={previewStyle} aria-hidden="true">
-    <span class="project-icon">{project.icon}</span>
+<Tag class="project-card" {...linkProps}>
+  <div
+    class="project-preview"
+    style={!project.image && !project.demoUrl && !project.phoneScreenshots ? previewStyle : (project.phoneScreenshots ? `background: linear-gradient(135deg, ${project.gradientFrom}, ${project.gradientTo});` : undefined)}
+    aria-hidden="true"
+  >
+    {project.phoneScreenshots && project.phoneScreenshots.length > 0 ? (
+      <div class="phone-screens">
+        {project.phoneScreenshots.slice(0, 3).map((src, i) => (
+          <img
+            src={src}
+            alt={`${project.title} — tela ${i + 1}`}
+            class={`phone-screen phone-screen-${i}`}
+            loading="lazy"
+          />
+        ))}
+      </div>
+    ) : (
+      <>
+        {project.image && (
+          <img src={project.image} alt={project.imageAlt ?? project.title} class="preview-image" loading="lazy" />
+        )}
+        {project.demoUrl && (
+          <iframe
+            src={project.demoUrl}
+            class="preview-frame"
+            loading="lazy"
+            tabindex="-1"
+            aria-hidden="true"
+            title={`${project.title} — live preview`}
+            sandbox="allow-scripts allow-same-origin"
+          ></iframe>
+        )}
+        {!project.image && !project.demoUrl && <span class="project-icon">{project.icon}</span>}
+        {(project.image || project.demoUrl) && <div class="preview-overlay"></div>}
+      </>
+    )}
   </div>
 
   <div class="project-body">
     <h3 class="project-title">{project.title}</h3>
-    <p class="project-desc">{project.description}</p>
+    <p class="project-desc">{description}</p>
 
     <div class="project-tags">
       {project.tech.map((t) => <span class="tag">{t}</span>)}
     </div>
 
     <div class="project-links">
-      {project.demoUrl && (
-        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="link-demo">
-          Ver projeto →
-        </a>
-      )}
-      {project.githubUrl && (
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="link-github">
-          GitHub
-        </a>
+      {hasStoreLinks ? (
+        <div class="store-badges">
+          {project.appStoreUrl && (
+            <a href={project.appStoreUrl} target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download on the App Store" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="120" height="40" rx="6" fill="#000"/>
+                <text x="38" y="13" font-family="-apple-system,sans-serif" font-size="7" fill="#fff" opacity="0.8">Download on the</text>
+                <text x="38" y="27" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#fff">App Store</text>
+                <path d="M18 8.5c1.6-2 4-2.3 4-2.3s.3 2.2-1.3 4.3c-1.7 2.2-3.7 1.9-3.7 1.9s-.4-1.9 1-3.9zm-1 5c.9 0 2.6-1.2 4.8-1.2 3.8 0 5.3 2.7 5.3 2.7s-2.9 1.5-2.9 5.3c0 4.2 3.7 5.7 3.7 5.7s-2.6 7.2-6.1 7.2c-1.6 0-2.9-1.1-4.6-1.1-1.7 0-3.4 1.1-4.6 1.1C9 33.2 6 26.1 6 21.1c0-5.7 3.5-8.7 6.9-8.7 1.8 0 3.2 1.1 4.1 1.1z" fill="#fff"/>
+              </svg>
+            </a>
+          )}
+          {project.playStoreUrl && (
+            <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Get it on Google Play" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="135" height="40" rx="6" fill="#000"/>
+                <text x="44" y="13" font-family="sans-serif" font-size="7" fill="#fff" opacity="0.8">GET IT ON</text>
+                <text x="44" y="27" font-family="sans-serif" font-size="13" font-weight="600" fill="#fff">Google Play</text>
+                <path d="M10 7.5l14.5 8.4L10 24.3V7.5z" fill="url(#gp-a)"/>
+                <path d="M10 7.5l8.8 9L28 8.1 10 7.5z" fill="url(#gp-b)"/>
+                <path d="M10 24.3l8.8-8.4L28 23.9 10 24.3z" fill="url(#gp-c)"/>
+                <path d="M28 8.1l-9.2 7.8 9.2 7.9 3.5-7.9L28 8.1z" fill="url(#gp-d)"/>
+                <defs>
+                  <linearGradient id="gp-a" x1="10" y1="15.9" x2="24.5" y2="15.9" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#32A071"/>
+                    <stop offset=".07" stop-color="#2DA771"/>
+                    <stop offset=".48" stop-color="#15CF74"/>
+                    <stop offset=".8" stop-color="#06E775"/>
+                    <stop offset="1" stop-color="#00F076"/>
+                  </linearGradient>
+                  <linearGradient id="gp-b" x1="10" y1="7.5" x2="28" y2="7.5" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#CCE4F8"/>
+                    <stop offset="1" stop-color="#A8CCF4"/>
+                  </linearGradient>
+                  <linearGradient id="gp-c" x1="10" y1="24.3" x2="28" y2="24.3" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#F3832B"/>
+                    <stop offset="1" stop-color="#F2A432"/>
+                  </linearGradient>
+                  <linearGradient id="gp-d" x1="28" y1="8.1" x2="31.5" y2="15.9" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#FA3541"/>
+                    <stop offset="1" stop-color="#E83C2F"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </a>
+          )}
+        </div>
+      ) : project.statusLabel ? (
+        <span class="status-badge">{project.statusLabel}</span>
+      ) : (
+        <>
+          {project.demoUrl && <span class="link-demo">{t.viewProject}</span>}
+          {project.githubUrl && <span class="link-github">GitHub</span>}
+        </>
       )}
     </div>
   </div>
-</article>
+</Tag>
 
 <style>
   .project-card {
+    display: block;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     overflow: hidden;
-    transition: border-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .project-card:hover { border-color: rgba(167, 139, 250, 0.3); }
+  .project-card:hover {
+    border-color: rgba(167, 139, 250, 0.3);
+    transform: translateY(-2px);
+  }
 
   .project-preview {
-    height: 130px;
+    height: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .preview-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    z-index: 0;
+  }
+
+  .preview-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280%;
+    height: 280%;
+    border: 0;
+    pointer-events: none;
+    transform: scale(0.357);
+    transform-origin: 0 0;
+    background: transparent;
+    z-index: 1;
+    opacity: 0;
+    animation: cardPreviewFadeIn 0.4s ease 0.6s forwards;
+  }
+
+  .project-card:hover .preview-frame { pointer-events: auto; }
+
+  @keyframes cardPreviewFadeIn {
+    to { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .preview-frame { animation: none; opacity: 1; }
+  }
+
+  .preview-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, rgba(8, 6, 18, 0.55) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .phone-screens {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    padding-top: 16px;
+  }
+
+  .phone-screen {
+    width: 38%;
+    max-width: 130px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .phone-screen-0 {
+    left: 50%;
+    transform: translateX(-115%) rotate(-6deg);
+    z-index: 1;
+  }
+
+  .phone-screen-1 {
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg) translateY(-8px);
+    z-index: 3;
+  }
+
+  .phone-screen-2 {
+    left: 50%;
+    transform: translateX(15%) rotate(6deg);
+    z-index: 2;
   }
 
   .project-icon { font-size: 36px; }
@@ -66,5 +249,44 @@ const previewStyle = `background: linear-gradient(135deg, ${project.gradientFrom
 
   .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
 
-  .project-links { display: flex; gap: 8px; }
+  .project-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .link-demo { color: var(--primary); }
+  .link-github { color: var(--text-muted); }
+
+  .status-badge {
+    color: var(--primary);
+    cursor: default;
+  }
+
+  .store-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .store-badge {
+    display: inline-flex;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .store-badge:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  .store-badge svg {
+    display: block;
+    height: 36px;
+    width: auto;
+  }
 </style>

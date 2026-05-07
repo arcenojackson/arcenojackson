@@ -113,6 +113,18 @@ body {
 
 .link-demo:hover { background: rgba(124, 58, 237, 0.25); }
 
+.status-badge {
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: default;
+  user-select: none;
+}
+
 .link-github {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
