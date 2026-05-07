@@ -10,20 +10,16 @@ interface Props {
 const { project, lang } = Astro.props;
 const t = translations[lang].projects;
 
-const cardHref = project.demoUrl || project.githubUrl || '#';
-const isExternal = !!(project.demoUrl || project.githubUrl);
+const appStoreUrl = project.appStoreUrl
+  ? (lang === 'en' ? project.appStoreUrl.replace('/br/', '/en/') : project.appStoreUrl)
+  : undefined;
 
 const category = lang === 'en' ? project.categoryEn : project.category;
 const description = lang === 'en' ? project.descriptionEn : project.description;
 const highlights = lang === 'en' ? (project.highlightsEn ?? project.highlights) : project.highlights;
 ---
 
-<a
-  href={cardHref}
-  target={isExternal ? '_blank' : undefined}
-  rel={isExternal ? 'noopener noreferrer' : undefined}
-  class="featured-card"
->
+<div class="featured-card">
   <span class="featured-badge">{t.featuredBadge}</span>
 
   <div class="featured-preview">
@@ -71,14 +67,26 @@ const highlights = lang === 'en' ? (project.highlightsEn ?? project.highlights) 
 
     <div class="featured-links">
       {project.demoUrl && (
-        <span class="link-demo">{t.accessApp}</span>
+        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" class="link-demo">
+          {t.accessApp}
+        </a>
+      )}
+      {appStoreUrl && (
+        <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download on the App Store">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="120" height="40" rx="6" fill="#000"/>
+            <text x="38" y="13" font-family="-apple-system,sans-serif" font-size="7" fill="#fff" opacity="0.8">Download on the</text>
+            <text x="38" y="27" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#fff">App Store</text>
+            <path d="M18 8.5c1.6-2 4-2.3 4-2.3s.3 2.2-1.3 4.3c-1.7 2.2-3.7 1.9-3.7 1.9s-.4-1.9 1-3.9zm-1 5c.9 0 2.6-1.2 4.8-1.2 3.8 0 5.3 2.7 5.3 2.7s-2.9 1.5-2.9 5.3c0 4.2 3.7 5.7 3.7 5.7s-2.6 7.2-6.1 7.2c-1.6 0-2.9-1.1-4.6-1.1-1.7 0-3.4 1.1-4.6 1.1C9 33.2 6 26.1 6 21.1c0-5.7 3.5-8.7 6.9-8.7 1.8 0 3.2 1.1 4.1 1.1z" fill="#fff"/>
+          </svg>
+        </a>
       )}
       {project.githubUrl && (
-        <span class="link-github">GitHub</span>
+        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="link-github">GitHub</a>
       )}
     </div>
   </div>
-</a>
+</div>
 
 <style>
   .featured-card {
@@ -88,7 +96,6 @@ const highlights = lang === 'en' ? (project.highlightsEn ?? project.highlights) 
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    text-decoration: none;
     color: inherit;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     box-shadow:
@@ -278,10 +285,43 @@ const highlights = lang === 'en' ? (project.highlightsEn ?? project.highlights) 
     align-items: center;
     font-size: 13px;
     font-weight: 600;
+    flex-wrap: wrap;
   }
 
-  .link-demo { color: var(--primary); }
-  .link-github { color: var(--text-muted); }
+  .link-demo {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .link-demo:hover { opacity: 0.8; }
+
+  .store-badge {
+    display: inline-flex;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .store-badge:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  .store-badge svg {
+    display: block;
+    height: 32px;
+    width: auto;
+  }
+
+  .link-github {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .link-github:hover { opacity: 0.8; }
 
   @media (max-width: 768px) {
     .featured-preview { height: 240px; }

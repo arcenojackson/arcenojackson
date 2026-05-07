@@ -13,6 +13,7 @@ export interface FeaturedProject {
   imageAlt?: string;
   highlights?: string[];
   highlightsEn?: string[];
+  appStoreUrl?: string;
 }
 
 export interface Project {
@@ -51,6 +52,7 @@ export const featuredProject: FeaturedProject = {
   imageAlt: 'Preview do Church Hub mostrando a tela de gestão de cultos',
   highlights: ['Gestão de Membros', 'Eventos e Cultos', 'Biblioteca Musical', 'Escalas e Equipes'],
   highlightsEn: ['Member Management', 'Events & Services', 'Music Library', 'Schedules & Teams'],
+  appStoreUrl: 'https://apps.apple.com/br/app/church-hub/id6766631440',
 };
 
 export const projects: Project[] = [
